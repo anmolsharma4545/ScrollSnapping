@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Horizontal Scroll Snapping</title>
+</head>
+<body>
+    <!--Desktop Version Only -->
+    <div class="container" onscroll="myFunction()">
+        <header>
+        <nav>
+            <h2 class="logo">Scroll Design</h2>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="first">
+        <h1>This is Second Page.</h1>
+        <h3>" Fix the cause , not the symptoms. "</h3>
+    </div>
+    <div class="second">
+        <h1>This is Second Page.</h1>
+        <h3>" Fix the cause , not the symptoms. "</h3>
+</div>
+<div class="third">
+    <h1>This is Third Page.</h1>
+    <h3>" Experience is the name everyone gives to their mistakes. "</h3>
+</div>
+</div>
+<script>
+    function myFunction(){
+    var el = document.querySelector('.container');
+    var x = el.scrollLeft;
+    if(x > 720){
+        document.querySelector('header').style.display = "block";
+    }
+    if(x < 720){
+        document.querySelector('header').style.display = "none";
+    }
+    
+    }
+</script>
+</body>
+</html>
